@@ -26,11 +26,6 @@ MSConversation *conv;
     // Dispose of any resources that can be recreated.
 }
 
--(void)generateImages{
-    NSArray *images = [[NSArray alloc]init];
-    
-}
-
 
 - (IBAction)populateMessage:(id)sender {
     MSMessageTemplateLayout *lay = [[MSMessageTemplateLayout alloc]init];
