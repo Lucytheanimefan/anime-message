@@ -26,11 +26,19 @@ MSConversation *conv;
     // Dispose of any resources that can be recreated.
 }
 
+-(void)generateImages{
+    NSArray *images = [[NSArray alloc]init];
+    
+}
+
+
 - (IBAction)populateMessage:(id)sender {
     MSMessageTemplateLayout *lay = [[MSMessageTemplateLayout alloc]init];
-    UIImage *img = [UIImage imageNamed:@"foodypenguin.png"];
-    lay.image = img;
     lay.caption=@"SOME CAPTION HERE";
+    lay.trailingCaption=@"Trailing caption";
+    lay.trailingSubcaption=@"Trailing subcaption";
+    lay.subcaption=@"Subcaption";
+    lay.mediaFileURL=[[NSURL alloc]initWithString:@"https://media.giphy.com/media/qw6gaOaGi9s64/giphy.gif"];
     MSMessage *mess = [[MSMessage alloc]initWithSession:[self activeConversation].selectedMessage.session];
     mess.layout = lay;
     
